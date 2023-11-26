@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const redis = "http://ip172-18-0-22-clg0gbssnmng00a90n4g-5000.direct.labs.play-with-docker.com/";
-const redis2 = "http://ip172-18-0-22-clg0gbssnmng00a90n4g-5001.direct.labs.play-with-docker.com/";
-
+const redis = "http://ip172-18-0-12-clhqoe6fml8g00bl3s1g-5000.direct.labs.play-with-docker.com/";
+const redis2 = "http://ip172-18-0-12-clhqoe6fml8g00bl3s1g-5001.direct.labs.play-with-docker.com/";
+const redis3 = "http://ip172-18-0-12-clhqoe6fml8g00bl3s1g-5002.direct.labs.play-with-docker.com/";
 
 
 const net = "http://ip172-18-0-40-cldnes0gftqg00e6e1a0-8080.direct.labs.play-with-docker.com/"
@@ -39,6 +39,20 @@ export const postRiesgos = async (/*obj ,*/ numero) => {
 export const postRiesgosdos = async (/*obj ,*/ numero) => {
     try {
         await axios.post(`${redis2}apix/valor`, {
+            /*obj,*/
+            col1: "userId",
+            col2: "movieId",
+            col3: "rating",
+            numero
+        });
+
+    } catch (error) {
+        console.log("Error ala almacebar los datos de 301 a mas");
+    }
+};
+export const postRiesgostres = async (/*obj ,*/ numero) => {
+    try {
+        await axios.post(`${redis3}apiz/valor`, {
             /*obj,*/
             col1: "userId",
             col2: "movieId",

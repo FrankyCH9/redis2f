@@ -63,13 +63,90 @@ function App() {
     try {
       await Data.postRiesgos(/*datos ,*/ usuario);
       await Data.postRiesgosdos(/*datos ,*/ usuario);
+      await Data.postRiesgostres(/*datos ,*/ usuario);
       console.log("Datos registrados correctamente");
-      await Data.getListarCoseno()
-      console.log("registro correcto")
+      // Inicia el temporizador
+      const inicioTiempo = performance.now();
+
+      // Tu código aquí (por ejemplo, un bucle o alguna operación intensiva)
+      for (let i = 0; i < 1000000; i++) {
+        // Operación ficticia para simular trabajo
+        //const resultado = Math.sqrt(i);
+      }
+
+      // Detén el temporizador
+      const finTiempo = performance.now();
+
+      // Calcula la diferencia de tiempo
+      const tiempoTranscurrido = finTiempo - inicioTiempo;
+
+      // Muestra el tiempo en la consola
+      console.log(`El código tardó ${tiempoTranscurrido} milisegundos.`);
+      //await Data.getListarCoseno()
+      //console.log("registro correcto")
     } catch (error) {
       console.error("Error al registrar datos:", error);
     }
   };
+
+
+  const registrarDatosapi2 = async () => {
+    try {
+      //await Data.postRiesgos(/*datos ,*/ usuario);
+      await Data.postRiesgosdos(/*datos ,*/ usuario);
+      console.log("Datos registrados correctamente");
+      // Inicia el temporizador
+      const inicioTiempo = performance.now();
+
+      // Tu código aquí (por ejemplo, un bucle o alguna operación intensiva)
+      for (let i = 0; i < 1000000; i++) {
+        // Operación ficticia para simular trabajo
+        //const resultado = Math.sqrt(i);
+      }
+
+      // Detén el temporizador
+      const finTiempo = performance.now();
+
+      // Calcula la diferencia de tiempo
+      const tiempoTranscurrido = finTiempo - inicioTiempo;
+
+      // Muestra el tiempo en la consola
+      console.log(`El código tardó ${tiempoTranscurrido} milisegundos.`);
+      //await Data.getListarCoseno()
+      //console.log("registro correcto")
+    } catch (error) {
+      console.error("Error al registrar datos:", error);
+    }
+  };
+  const registrarDatosapi3 = async () => {
+    try {
+      //await Data.postRiesgos(/*datos ,*/ usuario);
+      await Data.postRiesgostres(/*datos ,*/ usuario);
+      // Inicia el temporizador
+      const inicioTiempo = performance.now();
+
+      // Tu código aquí (por ejemplo, un bucle o alguna operación intensiva)
+      for (let i = 0; i < 1000000; i++) {
+        // Operación ficticia para simular trabajo
+        //const resultado = Math.sqrt(i);
+      }
+
+      // Detén el temporizador
+      const finTiempo = performance.now();
+
+      // Calcula la diferencia de tiempo
+      const tiempoTranscurrido = finTiempo - inicioTiempo;
+
+      // Muestra el tiempo en la consola
+      console.log(`El código tardó ${tiempoTranscurrido} milisegundos.`);
+      console.log("Datos registrados correctamente");
+      //await Data.getListarCoseno()
+      //console.log("registro correcto")
+    } catch (error) {
+      console.error("Error al registrar datos:", error);
+    }
+  };
+
 
   const registrarDatosx = async () => {
     try {
@@ -128,12 +205,15 @@ function App() {
           />
         </div>
         <div>
-        <button onClick={registrarCsv}>Cargar csv</button>
+          <button onClick={registrarCsv}>Cargar csv</button>
         </div>
 
 
         <div className='btns'>
-          <button onClick={registrarDatos}>Analizar datos de csv</button>
+          <button onClick={registrarDatos}>Analizar datos de csv api1</button>
+          <button onClick={registrarDatosapi2}>Analizar datos de csv api2</button>
+          <button onClick={registrarDatosapi3}>Analizar datos de csv api3</button>
+          <button onClick={() => { registrarDatos(); registrarDatosapi2(); registrarDatosapi3(); }}>Analizar datos de csv api1,api2,api3</button>
           <button onClick={registrarDatosx}>Generar resultados</button>
           <div>
             <label htmlFor="usuarioInput">Usuario:</label>
