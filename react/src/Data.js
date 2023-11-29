@@ -1,9 +1,10 @@
 import axios from "axios";
 
-const redis = "http://ip172-18-0-12-clhqoe6fml8g00bl3s1g-5000.direct.labs.play-with-docker.com/";
-const redis2 = "http://ip172-18-0-12-clhqoe6fml8g00bl3s1g-5001.direct.labs.play-with-docker.com/";
-const redis3 = "http://ip172-18-0-12-clhqoe6fml8g00bl3s1g-5002.direct.labs.play-with-docker.com/";
-
+const redis = "http://ip172-18-0-7-clj7ukcsnmng009b7h00-5000.direct.labs.play-with-docker.com/";
+const redis2 = "http://ip172-18-0-7-clj7ukcsnmng009b7h00-5001.direct.labs.play-with-docker.com/";
+const redis3 = "http://ip172-18-0-7-clj7ukcsnmng009b7h00-5002.direct.labs.play-with-docker.com/";
+const redis4 = "http://ip172-18-0-7-clj7ukcsnmng009b7h00-5003.direct.labs.play-with-docker.com/";
+const redis5 = "http://ip172-18-0-7-clj7ukcsnmng009b7h00-5004.direct.labs.play-with-docker.com/";
 
 const net = "http://ip172-18-0-40-cldnes0gftqg00e6e1a0-8080.direct.labs.play-with-docker.com/"
 
@@ -61,7 +62,37 @@ export const postRiesgostres = async (/*obj ,*/ numero) => {
         });
 
     } catch (error) {
-        console.log("Error ala almacebar los datos de 301 a mas");
+        console.log("Error ala almacebar los datos de 400 a mas");
+    }
+};
+
+export const postRiesgoscuatro = async (/*obj ,*/ numero) => {
+    try {
+        await axios.post(`${redis4}apia/valor`, {
+            /*obj,*/
+            col1: "userId",
+            col2: "movieId",
+            col3: "rating",
+            numero
+        });
+
+    } catch (error) {
+        console.log("Error ala almacenar para instancia 4");
+    }
+};
+
+export const postRiesgoscinco = async (/*obj ,*/ numero) => {
+    try {
+        await axios.post(`${redis5}apib/valor`, {
+            /*obj,*/
+            col1: "userId",
+            col2: "movieId",
+            col3: "rating",
+            numero
+        });
+
+    } catch (error) {
+        console.log("Error ala almacenar para instancia 5");
     }
 };
 

@@ -61,29 +61,18 @@ function App() {
 
   const registrarDatos = async () => {
     try {
-      await Data.postRiesgos(/*datos ,*/ usuario);
-      await Data.postRiesgosdos(/*datos ,*/ usuario);
-      await Data.postRiesgostres(/*datos ,*/ usuario);
-      console.log("Datos registrados correctamente");
-      // Inicia el temporizador
-      const inicioTiempo = performance.now();
+      const inicio = new Date();
 
-      // Tu código aquí (por ejemplo, un bucle o alguna operación intensiva)
-      for (let i = 0; i < 1000000; i++) {
-        // Operación ficticia para simular trabajo
-        //const resultado = Math.sqrt(i);
-      }
+      await Data.postRiesgos( usuario);
+      /*await Data.postRiesgosdos(usuario);
+      await Data.postRiesgostres( usuario);
+      await Data.postRiesgoscuatro( usuario);
+      await Data.postRiesgoscinco(usuario);*/
 
-      // Detén el temporizador
-      const finTiempo = performance.now();
+      const fin = new Date();
+      const tiempoDeEjecucion = fin - inicio;
 
-      // Calcula la diferencia de tiempo
-      const tiempoTranscurrido = finTiempo - inicioTiempo;
-
-      // Muestra el tiempo en la consola
-      console.log(`El código tardó ${tiempoTranscurrido} milisegundos.`);
-      //await Data.getListarCoseno()
-      //console.log("registro correcto")
+      console.log(`Datos registrados correctamente de api1. Tiempo de ejecución: ${tiempoDeEjecucion} milisegundos`);
     } catch (error) {
       console.error("Error al registrar datos:", error);
     }
@@ -122,6 +111,64 @@ function App() {
     try {
       //await Data.postRiesgos(/*datos ,*/ usuario);
       await Data.postRiesgostres(/*datos ,*/ usuario);
+      // Inicia el temporizador
+      const inicioTiempo = performance.now();
+
+      // Tu código aquí (por ejemplo, un bucle o alguna operación intensiva)
+      for (let i = 0; i < 1000000; i++) {
+        // Operación ficticia para simular trabajo
+        //const resultado = Math.sqrt(i);
+      }
+
+      // Detén el temporizador
+      const finTiempo = performance.now();
+
+      // Calcula la diferencia de tiempo
+      const tiempoTranscurrido = finTiempo - inicioTiempo;
+
+      // Muestra el tiempo en la consola
+      console.log(`El código tardó ${tiempoTranscurrido} milisegundos.`);
+      console.log("Datos registrados correctamente");
+      //await Data.getListarCoseno()
+      //console.log("registro correcto")
+    } catch (error) {
+      console.error("Error al registrar datos:", error);
+    }
+  };
+
+  const registrarDatosapi4 = async () => {
+    try {
+      //await Data.postRiesgos(/*datos ,*/ usuario);
+      await Data.postRiesgoscuatro(/*datos ,*/ usuario);
+      // Inicia el temporizador
+      const inicioTiempo = performance.now();
+
+      // Tu código aquí (por ejemplo, un bucle o alguna operación intensiva)
+      for (let i = 0; i < 1000000; i++) {
+        // Operación ficticia para simular trabajo
+        //const resultado = Math.sqrt(i);
+      }
+
+      // Detén el temporizador
+      const finTiempo = performance.now();
+
+      // Calcula la diferencia de tiempo
+      const tiempoTranscurrido = finTiempo - inicioTiempo;
+
+      // Muestra el tiempo en la consola
+      console.log(`El código tardó ${tiempoTranscurrido} milisegundos.`);
+      console.log("Datos registrados correctamente");
+      //await Data.getListarCoseno()
+      //console.log("registro correcto")
+    } catch (error) {
+      console.error("Error al registrar datos:", error);
+    }
+  };
+
+  const registrarDatosapi5 = async () => {
+    try {
+      //await Data.postRiesgos(/*datos ,*/ usuario);
+      await Data.postRiesgoscinco(/*datos ,*/ usuario);
       // Inicia el temporizador
       const inicioTiempo = performance.now();
 
@@ -213,7 +260,9 @@ function App() {
           <button onClick={registrarDatos}>Analizar datos de csv api1</button>
           <button onClick={registrarDatosapi2}>Analizar datos de csv api2</button>
           <button onClick={registrarDatosapi3}>Analizar datos de csv api3</button>
-          <button onClick={() => { registrarDatos(); registrarDatosapi2(); registrarDatosapi3(); }}>Analizar datos de csv api1,api2,api3</button>
+          <button onClick={registrarDatosapi4}>Analizar datos de csv api4</button>
+          <button onClick={registrarDatosapi5}>Analizar datos de csv api5</button>
+          <button onClick={() => { registrarDatos(); registrarDatosapi2(); registrarDatosapi3(); registrarDatosapi4(); registrarDatosapi5();}}>Analizar datos de csv api1,api2,api3, api4 , api 5</button>
           <button onClick={registrarDatosx}>Generar resultados</button>
           <div>
             <label htmlFor="usuarioInput">Usuario:</label>
