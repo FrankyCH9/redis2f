@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const redis = "http://ip172-18-0-7-clj7ukcsnmng009b7h00-5000.direct.labs.play-with-docker.com/";
-const redis2 = "http://ip172-18-0-7-clj7ukcsnmng009b7h00-5001.direct.labs.play-with-docker.com/";
-const redis3 = "http://ip172-18-0-7-clj7ukcsnmng009b7h00-5002.direct.labs.play-with-docker.com/";
-const redis4 = "http://ip172-18-0-7-clj7ukcsnmng009b7h00-5003.direct.labs.play-with-docker.com/";
-const redis5 = "http://ip172-18-0-7-clj7ukcsnmng009b7h00-5004.direct.labs.play-with-docker.com/";
+const redis = "http://ip172-18-0-24-clnup2efml8g00bli7n0-5000.direct.labs.play-with-docker.com/";
+const redis2 = "http://ip172-18-0-24-clnup2efml8g00bli7n0-5001.direct.labs.play-with-docker.com/";
+const redis3 = "http://ip172-18-0-24-clnup2efml8g00bli7n0-5002.direct.labs.play-with-docker.com/";
+const redis4 = "http://ip172-18-0-24-clnup2efml8g00bli7n0-5003.direct.labs.play-with-docker.com/";
+const redis5 = "http://ip172-18-0-24-clnup2efml8g00bli7n0-5004.direct.labs.play-with-docker.com/";
 
 const net = "http://ip172-18-0-40-cldnes0gftqg00e6e1a0-8080.direct.labs.play-with-docker.com/"
 
